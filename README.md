@@ -1,4 +1,23 @@
-# Getting Started with Create React App
+## TODO
+
+- ~~Limpar CRA~~
+- ~~Organizar estrutura inicial~~
+- Eslint
+- React Router v6
+- Lazy Loading + Rotas privadas
+- Suspense
+- Folders com exemplos (hooks, types, constants, utils e etc)
+- Axios + interceptors
+- CSS Global + variaveis
+- Test Setup + exemplos
+- .env + fonte unica de leitura dos env (perfomace)
+- Webvitals
+- ...
+- manifest.json
+- Documentação - Apontar as escolhas tomadas, link de referencias e etc.
+- Release
+
+<!-- # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
@@ -43,4 +62,4 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+To learn React, check out the [React documentation](https://reactjs.org/). -->
