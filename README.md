@@ -2,7 +2,7 @@
 
 - ~~Limpar CRA~~
 - ~~Organizar estrutura inicial~~
-- Eslint
+- ~~Eslint~~
 - React Router v6
 - Lazy Loading + Rotas privadas
 - Suspense
