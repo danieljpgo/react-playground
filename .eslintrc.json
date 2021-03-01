@@ -1,14 +1,9 @@
 {
     "env": {
         "browser": true,
-        "es2021": true
+        "es2021": true,
+        "jest": true
     },
-    "extends": [
-        "eslint:recommended",
-        "plugin:react/recommended",
-        "airbnb-typescript",
-        "plugin:@typescript-eslint/recommended"
-    ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
         "ecmaFeatures": {
@@ -20,24 +15,18 @@
     },
     "plugins": [
         "react",
+        "react-hooks",
         "@typescript-eslint"
     ],
+    "extends": [
+        "airbnb-typescript",
+        "airbnb/hooks",
+        "eslint:recommended",
+        "plugin:react/recommended",
+        "plugin:@typescript-eslint/recommended"
+    ],
     "rules": {
-        // "indent": [
-        //     "error",
-        //     "tab"
-        // ],
-        // "linebreak-style": [
-        //     "error",
-        //     "unix"
-        // ],
-        // "quotes": [
-        //     "error",
-        //     "single"
-        // ],
-        // "semi": [
-        //     "error",
-        //     "always"
-        // ]
+        "react/react-in-jsx-scope": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
     }
 }
