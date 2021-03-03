@@ -5,7 +5,7 @@ interface Props {
   delay?: number;
 }
 
-const Fallback = (props: Props) => {
+const FallbackWithDelay = (props: Props) => {
   const { delay = 300, element } = props;
   const [show, setShow] = React.useState(false);
 
@@ -21,4 +21,4 @@ const Fallback = (props: Props) => {
   );
 };
 
-export default Fallback;
+export default FallbackWithDelay;

@@ -1,21 +1,21 @@
 import * as React from 'react';
-import SuspenseWrapper from '../main/routers/SuspenseWrapper';
+import SuspenseWithDelay from '../common/layout/SuspenseWithDelay';
 
-const External = React.lazy(() => import('./External'));
-const Internal = React.lazy(() => import('./Internal'));
+const External = React.lazy(() => import('./external'));
+const Internal = React.lazy(() => import('./internal'));
 
 const Modules = () => {
   const auth = true;
 
   return (
-    <SuspenseWrapper
+    <SuspenseWithDelay
       delay={300}
       fallback={<div>Loading</div>}
     >
       {auth
         ? <Internal />
         : <External />}
-    </SuspenseWrapper>
+    </SuspenseWithDelay>
   );
 };
 

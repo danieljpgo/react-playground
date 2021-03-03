@@ -1,4 +1,4 @@
-import Modules from './Modules';
+import Modules from './modules';
 import './styles/global.css';
 
 const App = () => (

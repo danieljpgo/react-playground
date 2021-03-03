@@ -3,13 +3,15 @@
 - ~~Limpar CRA~~
 - ~~Organizar estrutura inicial~~
 - ~~Eslint~~
-- React Router v6
-- Lazy Loading + Rotas privadas
-- Suspense
-- Folders com exemplos (hooks, types, constants, utils e etc)
+- ~~React Router v6~~
+- ~~Lazy Loading + Rotas privadas~~
+- ~~Suspense + Fallback~~
+- ~~Folder Structure~~
+- ~~Folders com exemplos (hooks, types, constants, utils e etc)~~
 - Axios + interceptors
 - CSS Global + variaveis
 - Test Setup + exemplos
+- Error Boundary
 - .env + fonte unica de leitura dos env (perfomace)
 - Webvitals
 - ...

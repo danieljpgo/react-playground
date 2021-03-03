@@ -1,9 +1,9 @@
 import {
   Route, BrowserRouter, Routes, Navigate,
 } from 'react-router-dom';
-import Auth from './Auth';
-import Login from './Auth/Login';
 import Welcome from './Auth/Welcome';
+import Login from './Auth/Login';
+import Auth from './Auth';
 
 const External = () => (
   <BrowserRouter>

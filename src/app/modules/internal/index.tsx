@@ -1,9 +1,12 @@
 import {
-  BrowserRouter, Navigate, Route, Routes,
+  BrowserRouter,
+  Navigate,
+  Routes,
+  Route,
 } from 'react-router-dom';
-import Dashboard from './Dashboard';
-import Users from './Users';
 import Details from './Users/List/Details';
+import Users from './Users';
+import Dashboard from './Dashboard';
 
 const Internal = () => (
   <BrowserRouter>
@@ -30,7 +33,6 @@ const Internal = () => (
       />
     </Routes>
   </BrowserRouter>
-
 );
 
 export default Internal;

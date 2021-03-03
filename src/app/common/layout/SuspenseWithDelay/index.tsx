@@ -1,13 +1,13 @@
 import * as React from 'react';
-import type { Children } from '../../../common/types/children';
-import Fallback from '../Fallback';
+import type { Children } from '../../types/children';
+import Fallback from '../FallbackWithDelay';
 
 interface Props extends Children {
   fallback: React.ReactNode;
   delay?: number;
 }
 
-const SuspenseWrapper = (props: Props) => {
+const SuspenseWithDelay = (props: Props) => {
   const { fallback, delay = 300, children } = props;
 
   return (
@@ -20,4 +20,4 @@ const SuspenseWrapper = (props: Props) => {
   );
 };
 
-export default SuspenseWrapper;
+export default SuspenseWithDelay;
