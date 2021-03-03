@@ -1,11 +1,8 @@
+import Modules from './Modules';
 import './styles/global.css';
 
-const App = () => {
-  return (
-    <div>
-      Hello World
-    </div>
-  );
-}
+const App = () => (
+  <Modules />
+);
 
 export default App;
