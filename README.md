@@ -9,6 +9,8 @@
 - ~~Folder Structure~~
 - ~~Folders com exemplos (hooks, types, constants, utils e etc)~~
 - Axios + interceptors
+- Global State (Context with useReducer + padrões do another todo)
+- Auth Provider With Context
 - CSS Global + variaveis
 - Test Setup + exemplos
 - Error Boundary
@@ -16,8 +18,28 @@
 - Webvitals
 - ...
 - manifest.json
-- Documentação - Apontar as escolhas tomadas, link de referencias e etc.
+- Documentação
+  - Arquivo de rotas por modulo (escalabilidade)
+  - Usar apenas quando necessário um estado global, mas caso seja necessário, exemplo (auth)
+  - Apontar as escolhas tomadas
+  - link de referencias e etc.
 - Release
+
+- SEO
+
+- Layout com menu e headers (links do menu)
+- Listagem de usuarios dinamicamente e fetch de detalhes de usuários
+
+## Corrigir
+
+Estruturas de pastas (pensar sobre context por modulos?)
+
+Eslint
+eslint-plugin-filenames
+"plugins": ["filenames"],
+"filenames/match-exported": [1, "pascal"]
+
+https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
 
 <!-- # Getting Started with Create React App
 

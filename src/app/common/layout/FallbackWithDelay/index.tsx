@@ -9,7 +9,7 @@ const FallbackWithDelay = (props: Props) => {
   const { delay = 300, element } = props;
   const [show, setShow] = React.useState(false);
 
-  React.useEffect(() => {
+  React.useLayoutEffect(() => {
     const timeout = setTimeout(() => setShow(true), delay);
     return () => clearTimeout(timeout);
   }, [delay]);

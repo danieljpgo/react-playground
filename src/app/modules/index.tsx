@@ -10,7 +10,7 @@ const Modules = () => {
   return (
     <SuspenseWithDelay
       delay={300}
-      fallback={<div>Loading</div>}
+      fallback={<div>Loading Modules</div>}
     >
       {auth
         ? <Internal />

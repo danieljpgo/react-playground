@@ -1,38 +1,26 @@
+import * as React from 'react';
 import {
   BrowserRouter,
   Navigate,
   Routes,
   Route,
 } from 'react-router-dom';
-import Details from './Users/List/Details';
-import Users from './Users';
-import Dashboard from './Dashboard';
 
-const Internal = () => (
+const Users = React.lazy(() => import('./users'));
+const Dashboard = React.lazy(() => import('./dashboard/Dashboard'));
+
+const Routers = () => (
   <BrowserRouter>
     <Routes>
-      <Route
-        key="dashboard"
-        path="/"
-        element={<Dashboard />}
-      />
-      <Route
-        key="users"
-        path="users"
-        element={<Users />}
-      >
-        <Route
-          key="details"
-          path=":id"
-          element={<Details />}
-        />
-      </Route>
-      <Route
-        path="/*"
-        element={<Navigate to="/" />}
-      />
+      <Route key="dashboard" path="/" element={<Dashboard />} />
+      <Route key="users" path="users/*" element={<Users />} />
+      <Route path="/*" element={<Navigate to="/" />} />
     </Routes>
   </BrowserRouter>
+);
+
+const Internal = () => (
+  <Routers />
 );
 
 export default Internal;
