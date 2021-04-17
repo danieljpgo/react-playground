@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { Children } from '../types/children';
+import type { Children } from '../types/children';
 
 // @TODO melhorar o auth
 export type Auth = {

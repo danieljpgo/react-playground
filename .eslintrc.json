@@ -26,6 +26,7 @@
         "plugin:@typescript-eslint/recommended"
     ],
     "rules": {
+        "import/prefer-default-export": "off",
         "react/react-in-jsx-scope": "off",
         "react/require-default-props": "off",
         "@typescript-eslint/explicit-module-boundary-types": "off"

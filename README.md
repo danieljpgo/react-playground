@@ -1,24 +1,25 @@
 ## TODO
 
-- ~~Limpar CRA~~
-- ~~Organizar estrutura inicial~~
-- ~~Eslint~~
-- ~~React Router v6~~
-- ~~Lazy Loading + Rotas privadas~~
-- ~~Suspense + Fallback~~
-- ~~Folder Structure~~
-- ~~Folders com exemplos (hooks, types, constants, utils e etc)~~
-- Axios + interceptors
-- Global State (Context with useReducer + padrões do another todo)
-- Auth Provider With Context
-- CSS Global + variaveis
-- Test Setup + exemplos
-- Error Boundary
-- .env + fonte unica de leitura dos env (perfomace)
-- Webvitals
-- ...
-- manifest.json
-- Documentação
+- [x] Limpar CRA
+- [x] Organizar estrutura inicial
+- [x] Eslint
+- [x] React Router v6
+- [x] Lazy Loading + Rotas privadas
+- [x] Suspense + Fallback
+- [x] Folder Structure
+- [x] Folders com exemplos (hooks, types, constants, utils e etc)
+- [x] Nested Router files
+- [ ] Axios + interceptors
+- [ ] Global State (Context with useReducer + padrões do another todo)
+- [ ] Auth Provider With Context
+- [ ] CSS Global + variaveis
+- [ ] Test Setup + exemplos
+- [ ] Error Boundary
+- [ ] .env + fonte unica de leitura dos env (perfomace)
+- [ ] Webvitals
+- [ ] ...
+- [ ] manifest.json
+- [ ] Documentação
   - Arquivo de rotas por modulo (escalabilidade)
   - Usar apenas quando necessário um estado global, mas caso seja necessário, exemplo (auth)
   - Apontar as escolhas tomadas
@@ -26,6 +27,7 @@
 - Release
 
 - SEO
+- Protect Router (role)
 
 - Layout com menu e headers (links do menu)
 - Listagem de usuarios dinamicamente e fetch de detalhes de usuários

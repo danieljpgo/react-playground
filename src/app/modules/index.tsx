@@ -1,15 +1,17 @@
 import * as React from 'react';
-import { useAuth } from '../common/context/AuthContext';
+import { BrowserRouter } from 'react-router-dom';
+import { usePrivateModule } from '../common/components/PrivateModule/usePrivateModule';
+import { AuthProvider } from '../common/context/AuthContext';
 import SuspenseWithDelay from '../common/layout/SuspenseWithDelay';
 
 const External = React.lazy(() => import('./external'));
 const Internal = React.lazy(() => import('./internal'));
 
-// @TODO ajustar o useAuth
-const Modules = () => {
-  const [auth] = useAuth();
+const privateModulePaths = ['/', 'users'];
 
-  console.log(auth);
+const Routers = () => {
+  const auth = usePrivateModule(privateModulePaths);
+
   return (
     <SuspenseWithDelay
       delay={300}
@@ -21,5 +23,13 @@ const Modules = () => {
     </SuspenseWithDelay>
   );
 };
+
+const Modules = () => (
+  <BrowserRouter>
+    <AuthProvider>
+      <Routers />
+    </AuthProvider>
+  </BrowserRouter>
+);
 
 export default Modules;
