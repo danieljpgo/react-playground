@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import { usePrivateModule } from '../common/components/PrivateModule/usePrivateModule';
-import { AuthProvider } from '../common/context/AuthContext';
+import { AuthProvider, useAuth } from '../common/context/AuthContext';
 import SuspenseWithDelay from '../common/layout/SuspenseWithDelay';
 
 const External = React.lazy(() => import('./external'));
@@ -10,7 +10,9 @@ const Internal = React.lazy(() => import('./internal'));
 const privateModulePaths = ['/', 'users'];
 
 const Routers = () => {
-  const auth = usePrivateModule(privateModulePaths);
+  const [{ token }] = useAuth();
+  const isAutenticated = Boolean(token);
+  const auth = usePrivateModule(privateModulePaths, isAutenticated);
 
   return (
     <SuspenseWithDelay
