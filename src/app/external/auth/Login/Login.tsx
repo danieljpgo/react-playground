@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useAuth } from '../../../../common/context/AuthContext';
+import { useAuth } from '../../../common/context/AuthContext';
 
 const Login = () => {
   const [, dispatch] = useAuth();

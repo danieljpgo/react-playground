@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
-import SuspenseWithDelay from '../../common/layout/SuspenseWithDelay';
+import SuspenseWithDelay from '../common/layout/SuspenseWithDelay';
 
 const Users = React.lazy(() => import('./users'));
 const Dashboard = React.lazy(() => import('./dashboard/Dashboard'));
