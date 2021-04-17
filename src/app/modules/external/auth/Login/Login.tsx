@@ -7,7 +7,6 @@ const Login = () => {
 
   function handleLoginUser() {
     dispatch({ type: 'login', token: 'teste' });
-
     navigate('/');
   }
 
