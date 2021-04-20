@@ -1,7 +1,7 @@
 const Header = () => (
-  <head>
+  <header>
     header
-  </head>
+  </header>
 );
 
 export default Header;

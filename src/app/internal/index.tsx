@@ -1,6 +1,7 @@
 import * as React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
-import SuspenseWithDelay from '../common/layout/SuspenseWithDelay';
+import Header from '../common/layout/Navigation/Header';
+import SuspenseWithDelay from '../common/layout/SuspenseWithDelay/SuspenseWithDelay';
 
 const Users = React.lazy(() => import('./users'));
 const Dashboard = React.lazy(() => import('./dashboard/Dashboard'));
@@ -36,7 +37,12 @@ const Routers = () => (
 );
 
 const Internal = () => (
-  <Routers />
+  <>
+    <Header />
+    <main>
+      <Routers />
+    </main>
+  </>
 );
 
 export default Internal;
