@@ -1,6 +1,6 @@
 import { useNavigate, Link } from 'react-router-dom';
 
-const Login = () => {
+export default function LoginPage() {
   const navigate = useNavigate();
 
   function handleLoginUser() {
@@ -19,6 +19,4 @@ const Login = () => {
       </button>
     </div>
   );
-};
-
-export default Login;
+}

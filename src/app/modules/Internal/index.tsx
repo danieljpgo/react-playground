@@ -1,42 +1,42 @@
 import * as React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
-import SuspenseWithDelay from '../../common/components/SuspenseWithDelay';
-import Header from '../../common/components/Header/Header';
+import { SuspenseWithDelay } from '../../common/components/router';
+import { Header, Spinner } from '../../common/components/layout';
 
 const Users = React.lazy(() => import('./Users'));
 const Dashboard = React.lazy(() => import('./Dashboard/Dashboard'));
 
-const Routers = () => (
-  <Routes>
-    <Route
-      key="dashboard"
-      path="/"
-      element={(
-        <SuspenseWithDelay delay={300} fallback={<div>Loading Dashboard</div>}>
-          <Dashboard />
-        </SuspenseWithDelay>
+function InternalRouter() {
+  return (
+    <Routes>
+      <Route
+        path="/"
+        element={(
+          <SuspenseWithDelay delay={300} fallback={<Spinner />}>
+            <Dashboard />
+          </SuspenseWithDelay>
         )}
-    />
-    <Route
-      key="users"
-      path="users/*"
-      element={(
-        <SuspenseWithDelay delay={300} fallback={<div>Loading Users</div>}>
-          <Users />
-        </SuspenseWithDelay>
+      />
+      <Route
+        path="users/*"
+        element={(
+          <SuspenseWithDelay delay={300} fallback={<Spinner />}>
+            <Users />
+          </SuspenseWithDelay>
         )}
-    />
-    <Route path="/*" element={<Navigate to="." />} />
-  </Routes>
-);
+      />
+      <Route path="/*" element={<Navigate to="." />} />
+    </Routes>
+  );
+}
 
-const Internal = () => (
-  <div>
-    <Header />
-    <main>
-      <Routers />
-    </main>
-  </div>
-);
-
-export default Internal;
+export default function Internal() {
+  return (
+    <div>
+      <Header />
+      <main>
+        <InternalRouter />
+      </main>
+    </div>
+  );
+}

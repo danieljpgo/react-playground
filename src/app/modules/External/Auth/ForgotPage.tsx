@@ -1,6 +1,6 @@
 import { Link, Outlet, useMatch } from 'react-router-dom';
 
-const Forgot = () => {
+export default function ForgotPage() {
   const match = useMatch({ path: '/auth/forgot' });
 
   return (
@@ -19,6 +19,4 @@ const Forgot = () => {
       </div>
     </div>
   );
-};
-
-export default Forgot;
+}

@@ -1,23 +1,25 @@
 import { Navigate, Route, Routes } from 'react-router-dom';
-import EditUserProfile from './List/Edit/Edit';
-import UserProfile from './List/Profile/Profile';
-import ListUsers from './List/List';
+import UsersPage from './UsersPage';
+import UsersProfile from './UsersProfile';
+import UsersProfileEdit from './UsersProfileEdit';
 
-const Routers = () => (
-  <Routes>
-    <Route path="/" element={<ListUsers />}>
-      <Route path=":id" element={<UserProfile />} />
-      <Route path=":id/edit" element={<EditUserProfile />} />
-      <Route path="/*" element={<Navigate to="." />} />
-    </Route>
-  </Routes>
-);
+function UsersRouter() {
+  return (
+    <Routes>
+      <Route path="/" element={<UsersPage />}>
+        <Route path=":id" element={<UsersProfile />} />
+        <Route path=":id/edit" element={<UsersProfileEdit />} />
+        <Route path="/*" element={<Navigate to="." />} />
+      </Route>
+    </Routes>
+  );
+}
 
-const Users = () => (
-  <div>
-    <h2>Users</h2>
-    <Routers />
-  </div>
-);
-
-export default Users;
+export default function Users() {
+  return (
+    <div>
+      <h2>Users</h2>
+      <UsersRouter />
+    </div>
+  );
+}
