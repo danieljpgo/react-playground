@@ -1,3 +1,3 @@
 export const env = {
-  apiUrl: process.env.REACT_APP_API_URL
+  apiBaseUrl: process.env.REACT_APP_API_BASE_URL,
 };
