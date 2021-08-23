@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 type State = {
-  error: unknown;
+  error?: Error;
 };
 
 type Props = {
@@ -15,8 +15,13 @@ export default class ErrorBoundary extends React.Component<Props, State> {
     this.state = { error: undefined };
   }
 
-  static getDerivedStateFromError(error: unknown) {
+  static getDerivedStateFromError(error: Error): State {
     return { error };
+  }
+
+  static componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+    // eslint-disable-next-line no-console
+    console.error('Uncaught error:', error, errorInfo);
   }
 
   render() {
