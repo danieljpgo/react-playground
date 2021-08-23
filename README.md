@@ -9,12 +9,12 @@
 - [x] Folder Structure
 - [x] Folders com exemplos (hooks, types, constants, utils e etc)
 - [x] Nested Router files
-- [ ] Axios + interceptors
+- [x] Axios + interceptors
+- [x] .env + fonte unica de leitura dos env (perfomace)
+- [x] Error Boundary
 - [ ] Global State (Context with useReducer + padrões do another todo)
 - [ ] Auth Provider With Context
 - [ ] Test Setup + exemplos
-- [ ] Error Boundary
-- [ ] .env + fonte unica de leitura dos env (perfomace)
 - [ ] Webvitals
 - [ ] ...
 - [ ] manifest.json
