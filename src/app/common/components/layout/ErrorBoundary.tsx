@@ -19,9 +19,9 @@ export default class ErrorBoundary extends React.Component<Props, State> {
     return { error };
   }
 
-  static componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
+  static componentDidCatch(error: Error, info: React.ErrorInfo) {
     // eslint-disable-next-line no-console
-    console.error('Uncaught error:', error, errorInfo);
+    console.error('Uncaught error:', error, info);
   }
 
   render() {

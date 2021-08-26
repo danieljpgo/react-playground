@@ -1,14 +1,13 @@
-import { usePrivateModule } from '../../hooks/usePrivateModule';
+import { usePrivateModule } from '../../hooks';
 
 type PrivateModuleProps = {
-  children: (auth: boolean) => void;
   paths: string[];
   isAuthenticated: boolean;
+  children: (auth: boolean) => void;
 };
 
 export default function PrivateModule(props: PrivateModuleProps) {
   const { paths, isAuthenticated, children } = props;
-
   const auth = usePrivateModule(paths, isAuthenticated);
 
   return (

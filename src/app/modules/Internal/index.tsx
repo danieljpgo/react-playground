@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { Navigate, Routes, Route } from 'react-router-dom';
 import { SuspenseWithDelay } from '../../common/components/router';
-import { Header, Spinner } from '../../common/components/layout';
+import { Header, Spinner, Container } from '../../common/components/layout';
 
 const Users = React.lazy(() => import('./Users'));
 const Dashboard = React.lazy(() => import('./Dashboard/Dashboard'));
@@ -34,9 +34,9 @@ export default function Internal() {
   return (
     <div>
       <Header />
-      <main>
+      <Container>
         <InternalRouter />
-      </main>
+      </Container>
     </div>
   );
 }
