@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { SuspenseWithDelay } from '../common/components/router';
 import { Spinner } from '../common/components/layout';
 import { usePrivateModule } from '../common/hooks';
+import { AuthProvider } from '../common/context/authContext';
 
 const External = React.lazy(() => import('./External'));
 const Internal = React.lazy(() => import('./Internal'));
@@ -25,7 +26,9 @@ function ModuleRouter() {
 export default function Modules() {
   return (
     <BrowserRouter>
-      <ModuleRouter />
+      <AuthProvider>
+        <ModuleRouter />
+      </AuthProvider>
     </BrowserRouter>
   );
 }

@@ -12,8 +12,10 @@
 - [x] Axios + interceptors
 - [x] .env + fonte unica de leitura dos env (perfomace)
 - [x] Error Boundary
-- [ ] Global State (Context with useReducer + padrões do another todo)
-- [ ] Auth Provider With Context
+- [x] Global State (Context with useReducer + padrões do another todo)
+- [x] Auth Provider With Context
+- [ ] Melhor api.ts
+- [ ] Pasta LIB
 - [ ] Test Setup + exemplos
 - [ ] Webvitals
 - [ ] ...

@@ -1,9 +1,12 @@
 import { useNavigate, Link } from 'react-router-dom';
+import { useLogin } from '../../../common/context/authContext';
 
 export default function LoginPage() {
   const navigate = useNavigate();
+  const login = useLogin();
 
-  function handleLoginUser() {
+  async function handleLogin() {
+    await login({ login: 'teste@gmai.com', password: '123456' });
     navigate('/');
   }
 
@@ -14,7 +17,7 @@ export default function LoginPage() {
         <li><Link to="../forgot">Forgot Page</Link></li>
         <li><Link to="../../register">Register Module</Link></li>
       </ul>
-      <button type="button" onClick={() => handleLoginUser()}>
+      <button type="button" onClick={() => handleLogin()}>
         Login
       </button>
     </div>
