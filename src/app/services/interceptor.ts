@@ -5,12 +5,12 @@ import type { Token } from '../common/types';
 export async function request(config: AxiosRequestConfig) {
   const token = getLocalStorageData<Token>('token');
 
-  if (token && token['access-token']) {
+  if (token) {
     return {
       ...config,
       headers: {
         ...config.headers,
-        'access-token': token['access-token'],
+        'access-token': token,
       },
     };
   }

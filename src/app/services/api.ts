@@ -11,18 +11,18 @@ async function get<Data>(endpoint: string): Promise<Data> {
   return data;
 }
 
-async function post<Data, Body>(endpoint: string, body: Body): Promise<Data> {
-  const { data } = await instance.post<Data>(endpoint, body);
+async function post<Response, Body = unknown>(endpoint: string, body?: Body): Promise<Response> {
+  const { data } = await instance.post<Response>(endpoint, body);
   return data;
 }
 
-async function put<Data, Body>(endpoint: string, body: Body): Promise<Data> {
-  const { data } = await instance.put<Data>(endpoint, body);
+async function put<Response, Body = unknown>(endpoint: string, body: Body): Promise<Response> {
+  const { data } = await instance.put<Response>(endpoint, body);
   return data;
 }
 
-async function del<Data>(endpoint: string): Promise<Data> {
-  const { data } = await instance.delete<Data>(endpoint);
+async function del<Response>(endpoint: string): Promise<Response> {
+  const { data } = await instance.delete<Response>(endpoint);
   return data;
 }
 
