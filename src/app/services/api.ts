@@ -1,5 +1,5 @@
 import axios from 'axios';
-import { env } from '../common/utils';
+import { env } from '../common/constants';
 import { request, response } from './interceptor';
 
 const instance = axios.create({

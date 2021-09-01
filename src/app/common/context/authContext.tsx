@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { auth } from '../../services/requests';
-import { removeLocalStorageData, setLocalStorageData } from '../utils';
+import { removeLocalStorageData, setLocalStorageData } from '../../../lib/localStorage';
 
 type Auth = {
   token?: string;

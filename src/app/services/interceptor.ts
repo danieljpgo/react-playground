@@ -1,5 +1,5 @@
 import axios, { AxiosRequestConfig } from 'axios';
-import { getLocalStorageData, removeLocalStorageData } from '../common/utils';
+import { getLocalStorageData, removeLocalStorageData } from '../../lib/localStorage';
 import type { Token } from '../common/types';
 
 export async function request(config: AxiosRequestConfig) {

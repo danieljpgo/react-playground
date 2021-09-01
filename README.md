@@ -15,7 +15,7 @@
 - [x] Global State (Context with useReducer + padrões do another todo)
 - [x] Auth Provider With Context
 - [ ] Melhor api.ts
-- [ ] Pasta LIB
+- [x] Pasta LIB
 - [ ] Test Setup + exemplos
 - [ ] Webvitals
 - [ ] ...
@@ -43,3 +43,104 @@ eslint-plugin-filenames
 https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anonymous-default-export.md
 !-->
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+/src
+├── /app
+|   ├──/common
+|   |   ├── /components
+|   |   |   ├── /router
+|   |   |   |   ├── PrivateRoute.jsx
+|   |   |   |   ├── ProtectedRoute.jsx
+|   |   |   |   ├── ...
+|   |   |   |   └── index.js
+|   |   |   ├── /layout
+|   |   |   |   ├── Header.jsx
+|   |   |   |   ├── Container.jsx
+|   |   |   |   ├── ...
+|   |   |   |   └── index.js
+|   |   |   ├── /form
+|   |   |   |   ├── Input.jsx
+|   |   |   |   ├── Select.jsx
+|   |   |   |   ├── ...
+|   |   |   |   └── index.js
+|   |   |   └── ...
+|   |   ├── /hooks
+|   |   |   ├── useDebounce.js
+|   |   |   ├── useWindowSize.js
+|   |   |   ├── useFetch.js
+|   |   |   ├── ...
+|   |   |   └── index.js
+|   |   ├── /context
+|   |   |   ├── authContext.jsx
+|   |   |   ├── sessionContext.jsx
+|   |   |   ├── snackbarContext.jsx
+|   |   |   ├── mixPanelContext.jsx
+|   |   |   └── ...
+|   |   └── /constants <!-- constants e enums / checar necessidade -->
+|   |       ├── env.js
+|   |       ├── contrato.js
+|   |       ├── cotacao.js
+|   |       ├── ...
+|   |       └── index.js
+|   |   
+|   ├── /services
+|   |   ├── api.js
+|   |   └── interceptor.js
+|   └── /modules
+└── /lib
+    ├── date.js
+    ├── localStorage.js
+    └── movidesk.js
+
+
+
+
+
+
+
+
+/src
+└── /app
+    ├── ...
+    ├── ...
+    └── /styles
+        ├── global.ts
+        ├── theme.ts
+        └── /tokens
+            ├── breakpoints.ts
+            ├── typography.ts
+            ├── spacing.ts
+            ├── shapes.ts
+            ├── layers.ts
+            └── colors.ts    -->
