@@ -1,4 +1,4 @@
-import Modules from './modules';
+import Modules from './modules/Modules';
 import { ErrorBoundary } from './common/components/layout';
 import './styles/global.css';
 

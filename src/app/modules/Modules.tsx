@@ -10,7 +10,7 @@ const Internal = React.lazy(() => import('./Internal/Internal'));
 
 const privateModulePaths = ['/', 'users'];
 
-function ModuleRouter() {
+function ModulesRouter() {
   const isAuthenticated = true;
   const auth = usePrivateModule(privateModulePaths, isAuthenticated);
 
@@ -27,7 +27,7 @@ export default function Modules() {
   return (
     <BrowserRouter>
       <AuthProvider>
-        <ModuleRouter />
+        <ModulesRouter />
       </AuthProvider>
     </BrowserRouter>
   );
