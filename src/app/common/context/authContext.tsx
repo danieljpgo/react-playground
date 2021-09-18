@@ -1,5 +1,6 @@
 import * as React from 'react';
 import { auth } from '../../services/requests';
+import { useLocalStorageReducer } from '../hooks';
 import { removeLocalStorageData, setLocalStorageData } from '../../../lib/localStorage';
 
 type Auth = {
@@ -21,13 +22,11 @@ function authReducer(state: typeof initialState = initialState, action: AuthActi
         ...state,
         token: action.token,
       };
-
     case 'LOGOUT':
       return {
         ...state,
         token: undefined,
       };
-
     default:
       throw new Error(`Unhandled action type: ${action}`);
   }
@@ -41,7 +40,7 @@ type TaskProviderProps = {
 };
 export function AuthProvider(props: TaskProviderProps) {
   const { children } = props;
-  const [authData, dispatch] = React.useReducer(authReducer, initialState);
+  const [authData, dispatch] = useLocalStorageReducer('auth:data', authReducer, initialState);
 
   return (
     <AuthContext.Provider value={[authData, dispatch]}>
@@ -64,7 +63,7 @@ export function useLogin() {
   const login = React.useCallback(async (user: { login: string, password: string }) => {
     const { token } = await auth.login(user);
 
-    setLocalStorageData('token', token); // @TODO Melhor solução para sessão
+    setLocalStorageData('token', token);
     dispatch({ token, type: 'LOGIN' });
   }, [dispatch]);
 
