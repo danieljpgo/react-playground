@@ -11,11 +11,8 @@ async function login(body: LoginBody) {
   return api.post<LoginResponse, LoginBody>('/login', { login: body.login, password: body.password });
 }
 
-type LogoutResponse = {
-  // @TODO response de logout generico
-};
 async function logout() {
-  return api.post<LogoutResponse>('/logout');
+  return api.post<undefined, undefined>('/logout');
 }
 
 export const auth = {
