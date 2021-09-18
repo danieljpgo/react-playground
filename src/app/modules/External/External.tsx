@@ -3,8 +3,8 @@ import { Navigate, Routes, Route } from 'react-router-dom';
 import { SuspenseWithDelay } from '../../common/components/router';
 import { Spinner } from '../../common/components/layout';
 
-const Auth = React.lazy(() => import('./Auth'));
-const Register = React.lazy(() => import('./Register'));
+const Auth = React.lazy(() => import('./Auth/Auth'));
+const Register = React.lazy(() => import('./Register/Register'));
 
 function ExternalRouter() {
   return (

@@ -1,21 +1,21 @@
 import * as React from 'react';
 
-type State = {
+type ErrorBoundaryState = {
   error?: Error;
 };
 
-type Props = {
+type ErrorBoundaryProps = {
   children: React.ReactNode;
-  fallback: React.ComponentType<State>;
+  fallback: React.ComponentType<ErrorBoundaryState>;
 };
 
-export default class ErrorBoundary extends React.Component<Props, State> {
-  constructor(props: Props) {
+export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
+  constructor(props: ErrorBoundaryProps) {
     super(props);
     this.state = { error: undefined };
   }
 
-  static getDerivedStateFromError(error: Error): State {
+  static getDerivedStateFromError(error: Error): ErrorBoundaryState {
     return { error };
   }
 

@@ -3,7 +3,7 @@ import { Navigate, Routes, Route } from 'react-router-dom';
 import { SuspenseWithDelay } from '../../common/components/router';
 import { Header, Spinner, Container } from '../../common/components/layout';
 
-const Users = React.lazy(() => import('./Users'));
+const Users = React.lazy(() => import('./Users/User'));
 const Dashboard = React.lazy(() => import('./Dashboard/Dashboard'));
 
 function InternalRouter() {

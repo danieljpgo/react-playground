@@ -4,7 +4,7 @@ import ForgotPage from './ForgotPage';
 import ForgotEmail from './ForgotEmail';
 import ForgotPassword from './ForgotPassword';
 
-function Routers() {
+function AuthRouter() {
   return (
     <Routes>
       <Route path="login" element={<LoginPage />} />
@@ -22,7 +22,7 @@ export default function Auth() {
   return (
     <div>
       <h2>Auth Module</h2>
-      <Routers />
+      <AuthRouter />
     </div>
   );
 }
