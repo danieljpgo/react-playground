@@ -10,7 +10,7 @@ function FallbackPage({ error }: { error?: Error }) {
 
 export default function App() {
   return (
-    <ErrorBoundary fallback={FallbackPage}>
+    <ErrorBoundary fallback={(state) => <FallbackPage error={state.error} />}>
       <Modules />
     </ErrorBoundary>
   );

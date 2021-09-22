@@ -6,7 +6,7 @@ type ErrorBoundaryState = {
 
 type ErrorBoundaryProps = {
   children: React.ReactNode;
-  fallback: React.ComponentType<ErrorBoundaryState>;
+  fallback: (state: ErrorBoundaryState) => void;
 };
 
 export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
@@ -26,10 +26,14 @@ export default class ErrorBoundary extends React.Component<ErrorBoundaryProps, E
 
   render() {
     const { error } = this.state;
-    const { children, fallback: Fallback } = this.props;
+    const { children, fallback } = this.props;
 
     if (error) {
-      return <Fallback error={error} />;
+      return (
+        <>
+          {fallback({ error })}
+        </>
+      );
     }
 
     return children;

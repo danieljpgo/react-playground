@@ -31,7 +31,7 @@
 - Protect Router (role)
 - Layout com menu e headers (links do menu)
 - Listagem de usuarios dinamicamente e fetch de detalhes de usuários
-
+- MSW
 
 Estruturas de pastas (pensar sobre context por modulos?)
 
@@ -74,10 +74,13 @@ https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anon
 
 
 
-<!-- 
+
 /src
+├── index.jsx <!-- ReactDOM.render -->
+├── setupTest.js 
 ├── /app
-|   ├──/common
+|   ├── /common
+|   |   ├── /assets
 |   |   ├── /components
 |   |   |   ├── /router
 |   |   |   |   ├── PrivateRoute.jsx
@@ -109,38 +112,36 @@ https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/no-anon
 |   |   |   └── ...
 |   |   └── /constants <!-- constants e enums / checar necessidade -->
 |   |       ├── env.js
-|   |       ├── contrato.js
-|   |       ├── cotacao.js
+|   |       ├── contrato.js <!-- nome do arquivo alterar para ingles? -->
+|   |       ├── cotacao.js <!-- nome do arquivo alterar para ingles? -->
 |   |       ├── ...
 |   |       └── index.js
 |   |   
 |   ├── /services
 |   |   ├── api.js
-|   |   └── interceptor.js
-|   └── /modules
+|   |   ├── interceptor.js
+|   |   └── /requests <!-- cada arquivo representa dominio da api ex: /storage, /documento -->
+|   |       ├── storage.js <!-- ex: RequestStorageUpload -->
+|   |       ├── documento.js <!-- nome do arquivo alterar para ingles? -->
+|   |       ├── ...
+|   |       └── index.js
+|   ├── /modules
+|   |   ├── /auth
+|   |   |   ├── LoginPage.jsx
+|   |   |   ├── PasswordRecoveryPage.jsx
+|   |   |   └── ...
+|   |   ├── /negocios <!-- nome da pasta alterar para ingles? -->
+|   |   |   ├── BusinessPage.jsx
+|   |   |   ├── BusinessCard.jsx
+|   |   |   └── ...
+|   |   └── ...
+|   ├── /test <!-- arquivos de conf de test, render e etc -->
+|   |   
+|   ├── App.jsx <!-- <App /> -->
+|   └── Router.jsx <!-- Inicialmente, um arquivo de rota será mais simples -->
 └── /lib
-    ├── date.js
-    ├── localStorage.js
-    └── movidesk.js
-
-
-
-
-
-
-
-
-/src
-└── /app
-    ├── ...
-    ├── ...
-    └── /styles
-        ├── global.ts
-        ├── theme.ts
-        └── /tokens
-            ├── breakpoints.ts
-            ├── typography.ts
-            ├── spacing.ts
-            ├── shapes.ts
-            ├── layers.ts
-            └── colors.ts    -->
+    ├── date.js <!-- funções de conversão de data utilizando a biblioteca do app (luxon) -->
+    ├── localStorage.js <!--wrapper para funcoes que acessam o local storage -->
+    ├── browser.js <!-- isInternetExplorer, ...  -->
+    ├── movidesk.js 
+    └── ...
