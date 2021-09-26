@@ -34,6 +34,7 @@ function authReducer(state: typeof initialState = initialState, action: AuthActi
 
 type AuthContextType = [Auth, React.Dispatch<AuthActions>] | undefined;
 const AuthContext = React.createContext<AuthContextType>(undefined);
+AuthContext.displayName = 'AuthContext';
 
 type TaskProviderProps = {
   children : React.ReactNode
